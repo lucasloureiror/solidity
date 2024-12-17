@@ -6,5 +6,9 @@ contract HelloWorld {
     function SayHello() external pure returns (string memory) {
         return "Hello World!";
     }
+
+    function Greet(string memory _name) external pure returns (string memory, string memory){
+        return ("Hello,", _name);
+    }
 }
 
