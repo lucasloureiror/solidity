@@ -7,11 +7,11 @@ contract simpleStorage{
     constructor(){
         interactions = 0;
     }
-    function incrementor() private returns (uint){
+    function incrementor() internal returns (uint){
         interactions += 1;
         return interactions;
     }
-    function Interact () public returns (uint){
+    function Interact () external returns (uint){
         return incrementor();
     }
 }
