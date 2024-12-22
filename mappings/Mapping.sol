@@ -24,6 +24,10 @@ contract FavoriteRecords {
         }
     }
 
+    function getApprovedRecords() external view returns (string[9] memory){
+        return records;
+    }
+
     function addRecord(string memory _albumName) external{
         if (approvedRecords[_albumName] == true){
             userFavorites[msg.sender][_albumName] = true;
